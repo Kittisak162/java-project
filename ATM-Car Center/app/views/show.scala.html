@@ -1,4 +1,4 @@
-@(title:String)
+@(title:String,cars:List[models.Car])
 @main{
 <h5 class="mainshow">ยี่ห้อรถยนต์&nbsp;@title</h5>
 <nav class="navbar navbar-light bg-white justify-content-between align-top text-muted">
@@ -23,7 +23,7 @@
             <button type="button" class="btn btn-primary">Go</button>
         </div>
 </nav>
-<table align="center" height="400">
+<table align="center" height="400" border="1">
     <tr>
         <td></td>
         <td></td>

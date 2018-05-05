@@ -620,7 +620,12 @@ insert into computer (id,name,introduced,discontinued,company_id) values (572,'D
 insert into computer (id,name,introduced,discontinued,company_id) values (573,'Gateway LT3103U','2008-01-01',null,null);
 insert into computer (id,name,introduced,discontinued,company_id) values (574,'iPhone 4S','2011-10-14',null,1);
 
+
+insert into car (id,type,path,brandth,branden,name,typecar,color,year,price,desc,vote) values (1,"รถเก๋ง 4 ประตู","/assets/images/path/nissan/1.jpg","นิสสัน","Nissan","Almera E CVT Nismo Aero Package","เกียร์อัตโนมัติ","ขาว",2016,538000,"5555",0);
+insert into car (id,type,path,brandth,branden,name,typecar,color,year,price,desc,vote) values (2,"รถเก๋ง 4 ประตู","/assets/images/path/nissan/2.jpg","นิสสัน","Nissan","Sylphy 1.6 SV CVT E85","เกียร์อัตโนมัติ","ขาว",2016,870000,"5555",0);
+
 # --- !Downs
 
 delete from computer;
 delete from company;
+delete from car;

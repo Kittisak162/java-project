@@ -16,13 +16,13 @@ public class Car extends BaseModel {
 
     public String path;
 
-    public String  brand;
+    public String  brandth;
+
+    public String  branden;
 
     public String name;
 
     public String typecar;
-
-    public int eng;
 
     public String color;
 

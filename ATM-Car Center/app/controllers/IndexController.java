@@ -17,7 +17,9 @@ public class IndexController extends Controller {
     }
 
     public Result show(String title){
-        return ok(views.html.show.render(title));
+        List<Car> cars=new ArrayList<Car>();
+        cars=Car.find.all();
+        return ok(views.html.show.render(title,cars));
     }
 
     public Result about() {
