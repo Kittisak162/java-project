@@ -1,0 +1,170 @@
+@(content: Html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ATM Car Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/assets/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/style.css">
+    <link rel="icon" href="/assets/images/logo.png">
+</head>
+<body>
+    <table class="table-main" bgcolor="#fff" align="center">
+        <tr>
+            <th class="th-padding-none" valign="top">
+                <div class="th-main light-blue darken-3 text-white text-right">
+                    <font size="2"><a class="a-white" href="@routes.IndexController.about()">About us</a>  | ภาษาไทย English</font>
+                </div>
+                <div class="th-main light-blue darken-2 ">
+                    <img src="/assets/images/logo-banner.png" width="20%">
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th class="th-padding-none" valign="top">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="@routes.IndexController.index()">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Information Cars
+                                </a>
+                                <div class="dropdown-menu many-menu" aria-labelledby="navbarDropdown">
+                                    <div class="row">
+                                        <div class="col">
+                                            <a class="dropdown-item" href="@routes.IndexController.show("เบนซ์")">
+                                                <img src="/assets/images/Brand/benz.png" width="25" height="25" class="d-inline-block align-top" alt="">
+                                                &nbsp;เบนซ์
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="/assets/images/Brand/bmw.png" width="25" height="25" class="d-inline-block align-top" alt="">
+                                                &nbsp;บีเอ็มดับบลิว
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="/assets/images/Brand/chevrolet.png" width="25" height="25" class="d-inline-block align-top" alt="">
+                                                &nbsp;เชฟโรเลต
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="/assets/images/Brand/ford.png" width="25" height="25" class="d-inline-block align-top" alt="">
+                                                &nbsp;ฟอร์ด
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="/assets/images/Brand/honda.png" width="25" height="25" class="d-inline-block align-top" alt="">
+                                                &nbsp;ฮอนด้า
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="/assets/images/Brand/isuzu.png" width="25" height="25" class="d-inline-block align-top" alt="">
+                                                &nbsp;อีซูซุ
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="/assets/images/Brand/mazda.png" width="25" height="25" class="d-inline-block align-top" alt="">
+                                                &nbsp;มาสด้า
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="/assets/images/Brand/mg.png" width="25" height="25" class="d-inline-block align-top" alt="">
+                                                &nbsp;เอ็มจี
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="/assets/images/Brand/mis.png" width="25" height="25" class="d-inline-block align-top" alt="">
+                                                &nbsp;มิตซูบิชิ
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="/assets/images/Brand/nissan.png" width="25" height="25" class="d-inline-block align-top" alt="">
+                                                &nbsp;นิสสัน
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="/assets/images/Brand/suzuki.png" width="25" height="25" class="d-inline-block align-top" alt="">
+                                                &nbsp;ซูซูกิ
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="/assets/images/Brand/toyota.png" width="25" height="25" class="d-inline-block align-top" alt="">
+                                                &nbsp;โตโยต้า
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </nav>
+            </th>
+        </tr>
+        <tr>
+            <th class="" valign="top">
+                <section class="content">@content</section>
+            </th>
+        </tr>
+        <tr>
+            <th>
+
+
+                <!--Footer-->
+                <footer class="page-footer font-small light-blue darken-3 pt-4 mt-4">
+
+                    <!--Footer Links-->
+                    <div class="container-fluid text-center text-md-left">
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <!--First column-->
+                            <div class="col-md-5">
+                                <h5 class="text-uppercase">Footer Content</h5>
+                                <p>Here you can use rows and columns here to organize your footer content.</p>
+                            </div>
+                            <!--/.First column-->
+                            <div class="col-md-1"></div>
+                            <!--Second column-->
+                            <div class="col-md-5">
+                                <h5 class="text-uppercase">Links</h5>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a class="a-white" href="#!">Link 1</a>
+                                    </li>
+                                    <li>
+                                        <a class="a-white" href="#!">Link 2</a>
+                                    </li>
+                                    <li>
+                                        <a class="a-white" href="#!">Link 3</a>
+                                    </li>
+                                    <li>
+                                        <a class="a-white" href="#!">Link 4</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--/.Second column-->
+                        </div>
+                    </div>
+                    <!--/.Footer Links-->
+
+                    <!--Copyright-->
+                    <div class="footer-copyright py-3 justify-content-center">
+                        © 2018 Copyright :
+                        <a class="a-white" href="@routes.IndexController.index()">&nbsp;ATMCarCenter.com</a>
+                    </div>
+                    <!--/.Copyright-->
+
+                </footer>
+                <!--/.Footer-->
+
+
+            </th>
+        </tr>
+
+    </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</body>
+</html>

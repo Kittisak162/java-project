@@ -1,0 +1,35 @@
+@(title:String)
+@main{
+<h5 class="mainshow">ยี่ห้อรถยนต์&nbsp;@title</h5>
+<nav class="navbar navbar-light bg-white justify-content-between align-top text-muted">
+    จำนวนการค้นพบ 0 คัน
+        <div class="form-row align-items-center justify-content-end">
+            <label for="inlineFormCustomSelect">เรียงตาม : </label>
+            <div class="col-auto my-1">
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <option selected>ความเป็นที่นิยม</option>
+                    <option value="1">ราคาจากต่ำไปสูง</option>
+                    <option value="2">ราคาจากสูงไปต่ำ</option>
+                </select>
+            </div>
+            <label for="inputprice">ช่วงราคา : </label>
+            <div class="col-md-2">
+                <input class="form-control" id="inputprice" type="text" placeholder="ต่ำสุด">
+            </div>
+            -
+            <div class="col-md-2">
+                <input class="form-control" type="text" placeholder="สูงสุด">
+            </div>
+            <button type="button" class="btn btn-primary">Go</button>
+        </div>
+</nav>
+<table align="center" height="400">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+}
