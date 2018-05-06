@@ -1,35 +1,56 @@
-@(title:String,cars:List[models.Car])
+@(title:String,cars:List[models.Car],s:Int)
 @main{
 <h5 class="mainshow">ยี่ห้อรถยนต์&nbsp;@title</h5>
 <nav class="navbar navbar-light bg-white justify-content-between align-top text-muted">
-    จำนวนการค้นพบ 0 คัน
+    จำนวนการค้นพบ @cars.size คัน
         <div class="form-row align-items-center justify-content-end">
             <label for="inlineFormCustomSelect">เรียงตาม : </label>
             <div class="col-auto my-1">
-                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                    <option selected>ความเป็นที่นิยม</option>
-                    <option value="1">ราคาจากต่ำไปสูง</option>
-                    <option value="2">ราคาจากสูงไปต่ำ</option>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" onchange="window.location.href=this.value;">
+                    @if(s==0){
+                    <option value="@routes.IndexController.tempshow(title,0,-1,-1)" selected>ความเป็นที่นิยม</option>
+                    }else{
+                        <option value="@routes.IndexController.tempshow(title,0,-1,-1)">ความเป็นที่นิยม</option>
+                    }
+                    @if(s==1){
+                        <option value="@routes.IndexController.tempshow(title,1,-1,-1)" selected>ราคาจากต่ำไปสูง</option>
+                    }else{
+                        <option value="@routes.IndexController.tempshow(title,1,-1,-1)">ราคาจากต่ำไปสูง</option>
+                    }
+                    @if(s==2){
+                    <option value="@routes.IndexController.tempshow(title,2,-1,-1)" selected>ราคาจากสูงไปต่ำ</option>
+                    }else{
+                    <option value="@routes.IndexController.tempshow(title,2,-1,-1)">ราคาจากสูงไปต่ำ</option>
+                    }
                 </select>
             </div>
             <label for="inputprice">ช่วงราคา : </label>
             <div class="col-md-2">
-                <input class="form-control" id="inputprice" type="text" placeholder="ต่ำสุด">
+                <input class="form-control" name="pl" id="inputprice" type="text" placeholder="ต่ำสุด">
             </div>
             -
             <div class="col-md-2">
                 <input class="form-control" type="text" placeholder="สูงสุด">
             </div>
-            <button type="button" class="btn btn-primary">Go</button>
+            <button type="button" class="btn btn-primary" onclick="window.location.href='@routes.IndexController.tempshow(title,s,-1,-1)'" />Go</button>
         </div>
 </nav>
-<table align="center" height="400" border="1">
+<table class="table">
+    <tbody>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+            <div class="row">
+                @for(c <- cars) {
+                <div class="col-md-3" align="center">
+                    @c.price
+                    @c.vote
+                    <img width="50" src="@c.path" alt="" />
+                </div>
+                }
+            </div>
+        </td>
     </tr>
+    </tbody>
 </table>
 
 }

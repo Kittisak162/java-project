@@ -8,7 +8,9 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 #Get
 GET     /index                      controllers.IndexController.index()
 
-GET     /Cars                       controllers.IndexController.show(s:String)
+GET     /Car                        controllers.IndexController.tempshow(title:String,s:Int,l:Int,h:Int)
+
+GET     /Cars                       controllers.IndexController.show(title:String)
 
 GET     /about                      controllers.IndexController.about()
 
